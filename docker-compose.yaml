@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  backend:
+    image: adarsh5002/backend:latest
+    ports:
+      - "5002:5002" # Host:Container
+    environment:
+      MONGODB_URL: mongodb+srv://adarshtwari10072005:3WZTyZtTYI9Vcvbe@cluster0.azptjh2.mongodb.net/LMS?retryWrites=true&w=majority&appName=Cluster0
+      PORT: 5002
+
+  frontend:
+    image: adarsh5002/frontend:latest
+    ports:
+      - "5173:80"
+    environment: {}
